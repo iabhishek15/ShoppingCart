@@ -1,0 +1,121 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<!-- Bootstrap Font Icon CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id = "nav">
+    <div class = "container">
+        <div class = "container">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown">
+                  <a class="navbar-brand" href="#!">
+                      <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="30" alt="mdb logo">
+                  </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link navbar-link-2 waves-effect" href="">
+                    <i>Home</i>
+                </a>
+              </li>
+            </ul>
+        </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a href="#!" class="nav-link navbar-link-2 waves-effect">
+              <i class="bi bi-cart-fill"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown pl-2">
+            <a href="#!" type="button" class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Add Item</a>
+          </li>
+          <li class="nav-item dropdown pl-2">
+            <a href="/signup" type="button" class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign up</a>
+          </li>
+          <li class="nav-item dropdown pl-2">
+            <a href="/signin" type="button" class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light">Sign in</a>
+          </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+<!-- Navbar -->
+
+<!--content -->
+<div class = "row container mt-4">
+
+<!-- Left Side Categories -->
+    <div class = "container-fluid col-3">
+       <div class="list-group" id = "leftSide">
+         <button type="button" class="list-group-item list-group-item-action active">
+           Cras justo odio
+         </button>
+         <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in  <span class="badge badge-primary badge-pill">14</span></button>
+         <button type="button" class="list-group-item list-group-item-action">Morbi leo risus  <span class="badge badge-primary badge-pill">14</span></button>
+         <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac  <span class="badge badge-primary badge-pill">14</span></button>
+         <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros  <span class="badge badge-primary badge-pill">14</span></button>
+       </div>
+    </div>
+<!-- Left Side Categories -->
+
+<!--Card Items -->
+    <div class = "container col-8" id = "cards">
+        <% cards.forEach((val) => { %>
+            <div class = "card col-10 p-0 mb-4" id = "card">
+                <div class = 'row'>
+                    <div class = "container-fluid col-lg-6 col-md-12 col-sm-12">
+                        <img class="card-img-top h-100" src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Card image cap">
+                    </div>
+                    <div class = "container col-6 p-3">
+                         <h5 class="card-title">Card title</h5>
+                         <p><em>Posted by - Abhishek Singh</em></p>
+                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content something.</p>
+                         <div class = "container p-2 pb-3">
+                             <select class="form-select" aria-label="Default select example">
+                               <option selected>Quantity</option>
+                               <option value=1>1</option>
+                               <option value=2>2</option>
+                               <option value=3>3</option>
+                             </select>
+                             <span><b>$35</b></span>
+                         </div>
+                         <a class = "btn btn-warning"> Add to Cart <i class="bi bi-cart4"></i></a>
+                         <a class = "btn btn-outline-warning"> Buy Now </a>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+<!--Card Items -->
+
+</div>
+<!--content-->
+
+<style>
+    #leftSide {
+    }
+    #card {
+        box-shadow: 2px 2px 3px 3px lightgrey;
+        float:right;
+    }
+    #priceAddingContainer {
+        border:1px solid lightgrey;
+    }
+    #img {
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<body>
+</html>
+
+
+
+<!--navbar = https://mdbootstrap.com/docs/b4/jquery/ecommerce/layout/navbar/ -->
